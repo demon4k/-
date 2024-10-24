@@ -7,7 +7,7 @@ my_bro = {
             "phone" : "redmi",
             "animal" : "dog",
             "class" : 11},
-        "watch" : "serials",}
+        "watch" : "serials"}
 
 type_items = {}
 for k, v in my_bro.items():
