@@ -6,22 +6,14 @@ my_bro = {
             "country" : "Ukraine",
             "phone" : "redmi",
             "animal" : "dog",
-            "class" : 11
-        },
-        "watch" : "serials",
-    }
-print(my_bro)
+            "class" : 11},
+        "watch" : "serials",}
 
-my_bro = {
-        "name" : type("Serhiy"),
-        "year" : type(16),
-        "information" : {
-            "city" : type("Rozhyshche"),
-            "country" : type("Ukraine"),
-            "phone" : type("redmi"),
-            "animal" : type("dog"),
-            "class" : type(11)
-        },
-        "watch" : type("serials"),
-    }
-print(my_bro)
+type_items = {}
+for k, v in my_bro.items():
+    if type(v) == dict:
+        for k1, v1 in v.items():
+            type_items[k1] = type(v1)
+    else:
+        type_items[k] = type(v)
+print(type_items)
