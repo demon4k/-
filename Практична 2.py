@@ -1,12 +1,33 @@
-a = 8
-b = "Hello"
-c = 17
-d = 99
-
-list = [a, b, c, d]
-print(list)
-list = [type(a), type(b), type(c), type(d)]
-print(list)
-
-list_type_more = max(list, key=list.count)
-print(list_type_more)
+a = "Hello World"
+name = "Dmytro"
+surname = "Parhomchuk"
+age = 16
+weight = 60.55
+lst = [a, name, surname, age, weight]
+type_lst = []
+value_lst = []
+string = 0
+integer = 0
+floatt = 0
+other = 0
+for i in lst:
+    x = type(i)
+    y = i
+    type_lst.append(x)
+    value_lst.append(y)
+    if type(y) == str:
+        string += 1
+    elif type(y) == int:
+        integer += 1
+    elif type(y) == float:
+        floatt += 1
+    else:
+        other += 1
+if string > integer and string > floatt and string > other:
+    print("the most frequency type is 'str'")
+elif integer > string and integer > floatt and integer > other:
+    print("the most frequency type is 'int'")
+elif floatt > string and floatt > integer and floatt > other:
+    print("the most frequency type is 'float'")
+else:
+    print("we don't have a winner")
